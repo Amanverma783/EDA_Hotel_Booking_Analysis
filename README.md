@@ -75,3 +75,90 @@ Out main objective is perform EDA on the given dataset and draw useful conclusio
   * No-Show – customer did not check-in and did inform the hotel of the reason why
   
 32. **reservation_status_date** : *Date at which the last status was set. This variable can be used in conjunction with the ReservationStatus to understand when was the booking canceled or when did the customer checked-out of the hotel*
+
+# Data Cleaning 
+(1) Removing Duplicate rows
+* All duplicate rows were dropped.
+
+(2) Handling null values
+* Null values in columns company and agent were replaced by 0.
+* Null values in column country were replaced by 'others'.
+* Null values in column children were replaced by the mean of the column.
+(3) Converting columns to appropriate data types
+* Changed data type of children, company, agent to int type.
+* Changed data type of reservation_status_date to date type.
+(4) Removing outliers
+* One outlier was found in the adr column. Simply dropped it.
+
+# Performed EDA and tried answering the following questions:
+
+Ques1.What is the percentage of booking done in different hotels?
+
+Ques2.How many total bookings done in different Years?
+
+Ques3.How many total bookings done in different months?
+
+Ques4.Total Number of Booking Cancelled in different months?
+
+Ques5.Total Number of Non-Cancelled Bookings in different months?
+
+Ques6.How many days customers prefer to stay in week night?
+
+Ques7.How many days customers prefer to stay in weekend night?
+
+Ques8.what is the most preferred meal type by customers?
+
+Ques9.What is Percentage distribution of Deposite type ?
+
+Ques10.Which one is most preferred room type?
+
+Ques11.What are the top 20 countries from where we are getting more customers?
+
+Ques12.What Deposit Type most customer choose?
+
+Ques13.From which market segment we are getting more number of Booking Cancellation?
+
+Ques14.From which market segment we are getting more customers who are not cancelling their booking?
+
+Ques15.Which Agent(id) is booking the most number of hotels?
+
+Ques16.Which Room type has high average price?
+
+Ques17.In Which month most revenue are generated?
+
+Ques18.What is the optimal length to stay?
+
+Ques19.How many repeated guests we have?
+
+Ques20.Correlation between features.
+
+# Mainly performed using Matplotlib and Seaborn library and the following graph and plots had been used:
+
+Bar Plot.
+Histogram.
+Scatter Plot.
+Pie Chart.
+Line Plot.
+Heatmap.
+Box Plot
+
+# Conclusion
+
+(1) Around 60% bookings are for City hotel and 40% bookings are for Resort hotel, therefore City Hotel is
+busier than Resort hotel. Also the overall adr of City hotel is slightly higher than Resort hotel.
+(2) Mostly guests stay for less than 5 days in hotel and for longer stays Resort hotel is preferred.
+(3) Both hotels have significantly higher booking cancellation rates and very few guests less than 3 % 
+return for another booking in City hotel. 5% guests return for stay in Resort hotel.
+(4) Most of the guests came from european countries, with most of guests coming from Portugal.
+(5) Guests use different channels for making bookings out of which most preferred way is TA/TO.
+(6) For hotels higher adr deals come via GDS channel, so hotels should increase their popularity on this channel.
+(7) Almost 30% of bookings via TA/TO are cancelled.
+(8) Not getting same room as reserved, longer lead time and waiting time do not affect cancellation of bookings.
+Although different room allotment do lowers the adr.
+(9) July- August are the most busier and profitable months for both of hotels. 
+(10) Within a month, adr gradually increases as month ends, with small sudden rise on weekends.
+(11) Couples are the most common guests for hotels, hence hotels can plan services according to couples needs to
+increase revenue.
+(12) More number of people in guests results in more number of special requests.
+(13) Bookings made via complementary market segment and adults have on average high no. of special request.
+(14) For customers, generally the longer stays (more than 15 days) can result in better deals in terms of low adr.
